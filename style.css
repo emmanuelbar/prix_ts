@@ -1,0 +1,8 @@
+body{
+    width: 70%;
+    margin: 100px auto;
+}
+#error{
+    color: red;
+    font-weight: bold;
+}
