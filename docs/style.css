@@ -6,3 +6,6 @@ body{
     color: red;
     font-weight: bold;
 }
+.message {
+    text-align: center;
+}
