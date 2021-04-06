@@ -1,9 +1,6 @@
 $(document).ready(function () {
     $("#button_ts").click(function () {
         var error = false
-
-        $("#error").html(" ")
-        $("#resultat").html(" ")
         var minutes = parseInt($("#minute").val())
         var bc = $("#bc").val();
         var echelon = $("#echelon").val()
@@ -180,9 +177,12 @@ $(document).ready(function () {
         if (isNaN(minutes)) error = true
 
         if (error) {
+            $("#error").removeClass('hidden')
+            $("#resultat").addClass('hidden')
+
             if (isNaN(minutes)) {
                 $("#error").html(
-                    "Veuillez entrer un nombre valide sans virgules ni point"
+                    "Veuillez entrer un nombre valide sans virgule ni point"
                 );
             } else {
                 $("#error").html(
@@ -190,8 +190,11 @@ $(document).ready(function () {
                 );
             }
         } else {
+
+            $("#error").addClass('hidden')
+            $("#resultat").removeClass('hidden')
             $("#resultat").html(
-                `Vous etes a la BC${bc} echelon ${echelon}  </br>Pour ${minutes} minutes vous percevrez ${calcul_ts(minutes, prix_minute)} euros`
+                `Vous etes a la <span>BC${bc}</span> avec echelon <span>${echelon}</span>  </br>Pour <span>${minutes}</span> minutes vous percevrez <span>${calcul_ts(minutes, prix_minute)}</span> euros`
             );
         }
 
