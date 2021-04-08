@@ -1,60 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TS</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Calculer votre TS</h1>
-    <div class="container">
-        <div class="form-group row">
-          <label for="minute" class="col-sm-3 col-form-label">Entrer votre TS :</label>
-          <div class="col-sm-9">
-            <input type="number" class="form-control" id="minute" name="minute" value=0 autofocus>
-          </div>
-        </div>
-        <div class="form-group row">
-            <label for="bc" class="col-sm-3 col-form-label">Quel est ta BC ?</label>
-            <select class="form-control form-control-sm col-sm-9" name="bc" id="bc">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-            </select>
-        </div>
-        <div class="form-group row">
-            <label for="echelon" class="col-sm-3 col-form-label">Quel est ton echelon ?</label>
-            <select class="form-control form-control-sm col-sm-9" name="echelon" id="echelon">
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-            </select>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <input type="submit" class="btn btn-primary" id="button_ts" value="valider">
-          </div>
-        </div>
+  <div class="container">
+    <h1>Calculer votre TS</h1>
+    <div class="form-group row">
+      <label for="minute" class="col-sm-4 col-form-label">
+        TS (min) :
+      </label>
+      <div class="col-sm-8" id="divInput">
+        <input type="number" class="form-control" id="minute" name="minute" value=0>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="bc" class="col-sm-4 col-form-label">BC :</label>
+      <select class="form-control form-control-sm col-sm-8" name="bc" id="bc">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select>
+    </div>
+    <div class="form-group row">
+      <label for="echelon" class="col-sm-4 col-form-label">Echelon :</label>
+      <select class="form-control form-control-sm col-sm-8" name="echelon" id="echelon">
+        <option class="transparent">2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select>
     </div>
     <div class="message">
       <p id="resultat" class="hidden alert alert-success" role="alert"></p>
       <p id="error" class="hidden alert alert-danger" role="alert"></p>
-      
+
     </div>
-    
-   
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js.js"></script>
+    <div class="form-group row">
+      <a href="#" id="button_ts" class="bouton1 col-sm-6">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Valider
+      </a>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js.js"></script>
 </body>
+
 </html>
