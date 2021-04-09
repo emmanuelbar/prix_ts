@@ -194,7 +194,7 @@ $(document).ready(function () {
             $("#error").addClass('hidden')
             $("#resultat").removeClass('hidden')
             $("#resultat").html(
-                `Vous etes a la <span>BC${bc}</span> echelon <span>${echelon}</span>  </br>Pour <span>${minutes}</span> minutes vous percevrez <span>${calcul_ts(minutes, prix_minute)}</span> euros`
+                `Pour <span>${minutes}</span> minutes vous percevrez <span>${calcul_ts(minutes, prix_minute)}</span> euros`
             );
         }
 
