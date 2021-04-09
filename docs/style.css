@@ -171,4 +171,10 @@ input[type=submit]{
       bottom: 100%;
     }
   }
-  
+
+@media screen and (max-width:600px) {
+    .container{
+        width: 80%;
+    }
+    
+}
