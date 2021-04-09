@@ -58,6 +58,9 @@ label{
 .message {
     text-align: center;
 }
+.message p{
+    margin: 0;
+}
 .hidden{
     display: none;
 }
